@@ -15,11 +15,11 @@ end
 
 local DinoTable = workspace:WaitForChild("DinoEvent"):WaitForChild("DinoCraftingTable")
 
-CraftingService:FireServer("SetRecipe", DinoTable, "DinoEventWorkbench", "Dinosaur Egg")
+CraftingService:FireServer("SetRecipe", DinoTable, "DinoEventWorkbench", "Primal Egg")
 task.wait(0.3)
 
 for _, tool in ipairs(Backpack:GetChildren()) do
-    if tool:IsA("Tool") and tool:GetAttribute("h") == "Common Egg" then
+    if tool:IsA("Tool") and tool:GetAttribute("h") == "Dinosaur Egg" then
         tool.Parent = Character
         task.wait(0.3)
         local uuid = tool:GetAttribute("c")
